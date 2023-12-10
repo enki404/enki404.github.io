@@ -1,5 +1,5 @@
 ---
-title: "Conclusion"
+title: "Conclusions"
 mathjax: true
 layout: post
 categories: media
