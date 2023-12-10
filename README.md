@@ -19,12 +19,13 @@ All contents on this website are based on personal interests. My current researc
     <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img">
+    <div class="img" style="display:inline-block";>
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img">
+    <div class="img" style="display:inline-block";>
         <img src ="/assets/contactmodel.png">
     </div>
+  </div>
 
 
 
