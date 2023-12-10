@@ -1,6 +1,8 @@
 ---
 title: "Conclusion"
+mathjax: true
 layout: post
+categories: media
 ---
 
 # [Introduction]: https://enki404.github.io/markdown-examples
