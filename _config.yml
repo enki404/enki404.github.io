@@ -15,7 +15,7 @@ minimal: true             # use a dark header
 
 # Sections
 collections:
-- sections
+  sections:
 
 
 # Menu
