@@ -15,6 +15,6 @@ All contents on this website are based on personal interests. My current researc
 
 ## Screenshots
 
-![Figure 1](/asserts/2D_Matlab_hist.png)
+![Figure 1](/assets/2D_Matlab_hist.png)
 
 <img scr="/assets/2D_Matlab_hist.png" class="pic" width="360"  height="480">
