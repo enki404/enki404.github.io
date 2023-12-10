@@ -20,6 +20,11 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md", title: "Home"} #icon: home}
   - {file: "index.html", title: "Projects"} #icon: align-center}
   - {file: "About.md", title: "About"} #icon: address-card}
+  - {file: "2017-01-01-Introduction.md", title: "Introduction"}
+  - {file: "2017-02-01-Data-Preprocessing.md", title: "Data Preprocessing"}
+  - {file: "2017-03-01-Analysis.md", title: "Analysis"}
+  - {file: "2023-12-12-Results.md", title: "Results"}
+  - {file: "2023-12-11-Conclusion.md", title: "Conclusion"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:wayu2362@colorado.edu"}
