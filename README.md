@@ -15,14 +15,14 @@ All contents on this website are based on personal interests. My current researc
 
 
 
-  <div style="display:inline-block">
+  <div>
     <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img" style="display:inline-block">
+    <div class="img" style="text-align: center";>
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img" style="display:inline-block">
+    <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
 </div>
