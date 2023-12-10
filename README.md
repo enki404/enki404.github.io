@@ -13,16 +13,16 @@ All contents on this website are based on personal interests. My current researc
 * Deep learning
 * Image preprocessing
 
-## Screenshots
 
-  <div style="display:inline;">
+
+  <div style="display:inline-block">
     <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img">
+    <div class="img" style="display:inline-block">
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img">
+    <div class="img" style="display:inline-block">
         <img src ="/assets/contactmodel.png">
     </div>
 </div>
