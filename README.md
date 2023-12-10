@@ -15,19 +15,17 @@ All contents on this website are based on personal interests. My current researc
 
 ## Screenshots
 
-  <div id="banner">
-    <div class="inline-block">
+  <div>
+    <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-
-    <div class="inline-block">
+    <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-
-    <div class="inline-block">
+    <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
-  </div>
+</div>
 
 
 
