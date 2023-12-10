@@ -4,9 +4,7 @@ permalink: "/home/"
 layout: page
 ---
 
-## Hi:
-
-All content on this website is interest-based. My current research interests include:
+All contents on this website are based on personal interests. My current research interests include:
 * Numerical simulation/modeling
 * Soil mechanics
 * Geographic information system
@@ -19,4 +17,4 @@ All content on this website is interest-based. My current research interests inc
 
 ![Figure 1](/asserts/2D_Matlab_hist.png)
 
-<img scr="/asserts/2D_Matlab_hist.png" class="large" width="360"  height="480">
+<img scr="/_asserts/2D_Matlab_hist.png" class="pic" width="360"  height="480">
