@@ -15,7 +15,7 @@ All contents on this website are based on personal interests. My current researc
 
 ## Screenshots
 
-  <div>
+  <div style="display:inline;">
     <div class="img">
         <img src ="/assets/contactmodel.png">
     </div>
