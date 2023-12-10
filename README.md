@@ -15,14 +15,14 @@ All contents on this website are based on personal interests. My current researc
 
 
 
-  <div>
-    <div class="img">
+  <div style="text-align: center";>
+    <div class="img" style="text-align: center";>
         <img src ="/assets/contactmodel.png">
     </div>
     <div class="img" style="text-align: center";>
         <img src ="/assets/contactmodel.png">
     </div>
-    <div class="img">
+    <div class="img" style="text-align: center";>
         <img src ="/assets/contactmodel.png">
     </div>
 </div>
