@@ -13,10 +13,6 @@ show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
 minimal: true             # use a dark header
 
-# Sections
-collections:
-  sections:
-
 
 # Menu
 
