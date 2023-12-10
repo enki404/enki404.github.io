@@ -15,10 +15,9 @@ All contents on this website are based on personal interests. My current researc
 
 ## Screenshots
 
-<div class="third">
-<img src= "(/assets/2D_Matlab_hist.png)">
-<img src= "/assets/contactmodel.png">
-<img src= "/assets/contactmodel.png">
+<div class="two">
+<img src= "(/assets/2D_Matlab_hist.png)" alt="">
+<img src= "/assets/contactmodel.png" alt="">
 </div>
 
 
