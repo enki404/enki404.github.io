@@ -17,4 +17,4 @@ All contents on this website are based on personal interests. My current researc
 
 ![Figure 1](/asserts/2D_Matlab_hist.png)
 
-<img scr="/_asserts/2D_Matlab_hist.png" class="pic" width="360"  height="480">
+<img scr="/assets/2D_Matlab_hist.png" class="pic" width="360"  height="480">
