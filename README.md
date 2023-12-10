@@ -1,7 +1,7 @@
 ---
 title: "Hi~"
 permalink: "/home/"
-layout: default
+layout: page
 ---
 
 All contents on this website are based on personal interests. My current research interests include:
