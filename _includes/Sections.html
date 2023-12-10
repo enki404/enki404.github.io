@@ -1,0 +1,15 @@
+---
+layout: default
+title: Sections
+---
+
+<h1>Sections</h1>
+
+<ul>
+  {% for section in site.sections %}
+    <li>
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
