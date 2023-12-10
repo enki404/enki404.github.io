@@ -4,12 +4,5 @@ layout: default
 sitemap: false
 ---
 
-{% assign sections = site.sections | sort: 'order' %}
-{% for section in sections %}
-  {% if section.include != null %}
-  {% else %}
-    {% include sections/default.html %}
-  {% endif %}
-{% endfor %
 
 {% include archive.html %}
