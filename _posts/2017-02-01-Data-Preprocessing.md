@@ -1,5 +1,5 @@
 ---
-title:  "Data_Preprocessing"
+title:  "Data-Preprocessing"
 mathjax: true
 layout: post
 categories: media
