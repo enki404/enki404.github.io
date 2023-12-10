@@ -18,6 +18,6 @@ All contents on this website are based on personal interests. My current researc
 ![Figure 1](/assets/2D_Matlab_hist.png)
 
 
-<img scr="/assets/2D_Matlab_hist.png" alt ="" width="480"  height="480">
+<img src="/assets/2D_Matlab_hist.png" alt ="" width="480"  height="480">
 
 
