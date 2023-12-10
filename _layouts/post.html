@@ -3,6 +3,7 @@ layout: default
 ---
 
 <article>
+  
   {% include meta.html post=page %}
     <nav>
     <ul>
@@ -10,10 +11,12 @@ layout: default
       <li><a href="/Data_Preprocessing/">Data_Preprocessing</a></li>
       <li><a href="/Analysis/">Analysis</a></li>
       <li><a href="/Results/">Results</a></li>
-      <li><a href="/Conclusion/">Conclusion</a></li>
+      <li><a href="/Conclusions/">Conclusions</a></li>
     </ul>
   </nav>
+  
   {{ content }}
+  
   {% if page.comments != false and site.comments.isso or site.comments.disqus %}
     <hr>
     {% if site.comments.isso_domain %}<div id="isso-thread"></div>{% endif %}
