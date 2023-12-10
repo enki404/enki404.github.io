@@ -1,7 +1,7 @@
 ---
 title: "Hi~"
 permalink: "/home/"
-layout: page
+layout: default
 ---
 
 All contents on this website are based on personal interests. My current research interests include:
@@ -18,6 +18,6 @@ All contents on this website are based on personal interests. My current researc
 ![Figure 1](/assets/2D_Matlab_hist.png)
 
 
-<img scr="/assets/2D_Matlab_hist.png" class="img" width="480"  height="480">
+<img scr="/assets/2D_Matlab_hist.png" class="figure" width="480"  height="480">
 
 
