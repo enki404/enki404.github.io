@@ -8,7 +8,7 @@ order: 1
 
 ---
 
-* What is Drained [Traxial Shear Test]?
+* ### **What is Drained [Traxial Shear Test]?**
   
   Triaxial shear testing is a widely employed method for assessing the mechanical properties of deformable solids, particularly soils (such as sands and clays), rocks, and various granular materials or powders.
 
@@ -25,7 +25,7 @@ Triaxial test data yield essential material parameters, including shear resistan
 ---
 
 
-* Why do we consider Microstructure of granular materials?
+* ### **Why do we consider microstructure expression of granular materials?**
   
   
 Geotechnical researchers utilize a variety of experimental and modeling techniques to understand the mechanical behavior of granular soils (Terzaghi et al., 1996)[1]. One of the most important theoretical frameworks in this regard is the critical state soil mechanics theory (CSSM) proposed by the Cambridge group (Roscoe et al., 1958; Schofield & Wroth, 1968)[2][3]. In this framework, the state of the soil is characterized by the void ratio e and the mean effective stress p', and is attracted by the critical state line (CSL) in e-p space upon monotonic shear. The **`critical state line (CSL)`**, also known as the **`critical [void ratio] line`**, represents the void ratio-effective stress state reached when all net void ratio and effective stress changes are completed after the soil has been subjected to a large strain.
@@ -44,7 +44,7 @@ Therefore, the second-order fabric tensor constructed by CFT can be used to visu
 
 ---
 
-* Why do we consider Microstructure of granular materials?
+* ### **What are the applicatioins of CFT?**
 
 The cyclic triaxial test can determine the cyclic strength (also known as liquefaction potential) of the soil by controlling the cyclic load (ASTM D5311/D5311M-13, 2022)[5].
 
