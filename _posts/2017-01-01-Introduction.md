@@ -28,11 +28,11 @@ Triaxial test data yield essential material parameters, including shear resistan
 * Why do we consider Microstructure of granular materials?
   
   
-Geotechnical researchers utilize a variety of experimental and modeling techniques to understand the mechanical behavior of granular soils (Terzaghi et al., 1996)[^1]. One of the most important theoretical frameworks in this regard is the critical state soil mechanics theory (CSSM) proposed by the Cambridge group (Roscoe et al., 1958; Schofield & Wroth, 1968)[^2][^3]. In this framework, the state of the soil is characterized by the void ratio e and the mean effective stress p', and is attracted by the critical state line (CSL) in e-p space upon monotonic shear. The **`critical state line (CSL)`**, also known as the **`critical [void ratio] line`**, represents the void ratio-effective stress state reached when all net void ratio and effective stress changes are completed after the soil has been subjected to a large strain.
+Geotechnical researchers utilize a variety of experimental and modeling techniques to understand the mechanical behavior of granular soils (Terzaghi et al., 1996)[1]. One of the most important theoretical frameworks in this regard is the critical state soil mechanics theory (CSSM) proposed by the Cambridge group (Roscoe et al., 1958; Schofield & Wroth, 1968)[2][3]. In this framework, the state of the soil is characterized by the void ratio e and the mean effective stress p', and is attracted by the critical state line (CSL) in e-p space upon monotonic shear. The **`critical state line (CSL)`**, also known as the **`critical [void ratio] line`**, represents the void ratio-effective stress state reached when all net void ratio and effective stress changes are completed after the soil has been subjected to a large strain.
 
 This framework provides many opportunities to construct constitutive models to simulate soil stress-strain behavior. Most geotechnical studies use first-order geometric descriptors (i.e., void fraction) to describe critical state phenomena. 
 
-Recently, Zhang et al. (2020)[^4] proposed a new constitutive framework for granular materials called `critical fabric theory (CFT)`. CFT aims to define critical states relying solely on the geometric characteristics of the soil's inertial structure. Specifically, a second-order fabric tensor can be constructed based on the directional distribution density of contact normals. Critical states in CFT can be visualized as critical structure surfaces (CFS) in the main structure space. It was proposed that CFS attracts the fabric state of granular material when sheared, which is manifested by the fabric path toward the CFS. **The classical CSL and CSSM can be recovered after providing some secondary relations linking the contact fabric to the stress tensor and the void fraction of the particle components.**
+Recently, Zhang et al. (2020)[4] proposed a new constitutive framework for granular materials called `critical fabric theory (CFT)`. CFT aims to define critical states relying solely on the geometric characteristics of the soil's inertial structure. Specifically, a second-order fabric tensor can be constructed based on the directional distribution density of contact normals. Critical states in CFT can be visualized as critical structure surfaces (CFS) in the main structure space. It was proposed that CFS attracts the fabric state of granular material when sheared, which is manifested by the fabric path toward the CFS. **The classical CSL and CSSM can be recovered after providing some secondary relations linking the contact fabric to the stress tensor and the void fraction of the particle components.**
 
     CFT provides an alternative perspective on critical state phenomena with several unique advantages:
     
@@ -46,7 +46,7 @@ Therefore, the second-order fabric tensor constructed by CFT can be used to visu
 
 * Why do we consider Microstructure of granular materials?
 
-The cyclic triaxial test can determine the cyclic strength (also known as liquefaction potential) of the soil by controlling the cyclic load (ASTM D5311/D5311M-13, 2022)[^5].
+The cyclic triaxial test can determine the cyclic strength (also known as liquefaction potential) of the soil by controlling the cyclic load (ASTM D5311/D5311M-13, 2022)[5].
 
 Simple elastoplastic models built upon CFT can model the basic behaviors of granular soils under a wide variety stress paths such as drained and undrained monotonic loading and undrained cyclic loading. The theory has been systematically validated against undrained triaxial compression data on sand with various initial densities. However, the model prediction has not been checked with sand behavior under drained cyclic loading, i.e., the ratcheting behavior. Dynamic triaxial testing is one of the main methods to evaluate the strength and deformation characteristics of soils under cyclic loading conditions. 
 
@@ -55,8 +55,8 @@ These cyclic loads simulate the reality of dynamic loads that can come from eart
 
 [Traxial Shear Test]: https://en.wikipedia.org/wiki/Triaxial_shear_test#Consolidated_drained_(CD) 
 [void ratio]: https://en.wikipedia.org/wiki/Void_ratio
-[^1]: https://books.google.com/books?hl=en&lr=&id=XjH6DwAAQBAJ&oi=fnd&pg=PR19&dq=Terzaghi+et+al.,+1996&ots=aiGuM4WccK&sig=Lkl5CF0Xa7-dGXNKHd0ahz7r3O0#v=onepage&q=Terzaghi%20et%20al.%2C%201996&f=false
-[^2]: https://www.icevirtuallibrary.com/doi/abs/10.1680/geot.1958.8.1.22
-[^3]: https://d1wqtxts1xzle7.cloudfront.net/7615800/cssm-libre.pdf?1391814949=&response-content-disposition=inline%3B+filename%3DCritical_state_soil_mechanics.pdf&Expires=1702336592&Signature=bhDTl5FBnXPNN5FK7uljbb4OpyUyurlXH~Rf2iKL-H2GfeGmBF42bz-XjMPdxr8GNR0pMRNYIZFYc0ZVrdH7wLNNKU9lSavx2rjBcR2bnaZ7J82prUf4E2N-QwiTQjchZVe7of7b~1tsphsrj~lDXv3bZS~A5hg1vhIx1ugvttWPRdp2oHfAESXqEt-fyn~NYBpPwax0jVijIIsGc8vAKBbbTzPcXV8-1HBgySNzCQmgZX6PI5~NMfHx4P1h0BKJcjq16fPzwsJ20gyJWcw1h~vBTrI6A4dJXc7TLW2zNI2KUeNWyJmEXEMJyQ0mMS0qi0wlnXcPj88oTrWVkRQZrg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
-[^4]: https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EM.1943-7889.0001741?casa_token=_qsEivr1V2sAAAAA%3Arxm-tzo7DcDOm17hw7iiSX72BWt1yydmow65CY1wesv9Mf0JARVk07KaH_g7_AG_JInMJw6Ofnor
-[^5]: https://www.astm.org/d5311_d5311m-13.html 
+[1]: https://books.google.com/books?hl=en&lr=&id=XjH6DwAAQBAJ&oi=fnd&pg=PR19&dq=Terzaghi+et+al.,+1996&ots=aiGuM4WccK&sig=Lkl5CF0Xa7-dGXNKHd0ahz7r3O0#v=onepage&q=Terzaghi%20et%20al.%2C%201996&f=false
+[2]: https://www.icevirtuallibrary.com/doi/abs/10.1680/geot.1958.8.1.22
+[3]: https://d1wqtxts1xzle7.cloudfront.net/7615800/cssm-libre.pdf?1391814949=&response-content-disposition=inline%3B+filename%3DCritical_state_soil_mechanics.pdf&Expires=1702336592&Signature=bhDTl5FBnXPNN5FK7uljbb4OpyUyurlXH~Rf2iKL-H2GfeGmBF42bz-XjMPdxr8GNR0pMRNYIZFYc0ZVrdH7wLNNKU9lSavx2rjBcR2bnaZ7J82prUf4E2N-QwiTQjchZVe7of7b~1tsphsrj~lDXv3bZS~A5hg1vhIx1ugvttWPRdp2oHfAESXqEt-fyn~NYBpPwax0jVijIIsGc8vAKBbbTzPcXV8-1HBgySNzCQmgZX6PI5~NMfHx4P1h0BKJcjq16fPzwsJ20gyJWcw1h~vBTrI6A4dJXc7TLW2zNI2KUeNWyJmEXEMJyQ0mMS0qi0wlnXcPj88oTrWVkRQZrg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+[4]: https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EM.1943-7889.0001741?casa_token=_qsEivr1V2sAAAAA%3Arxm-tzo7DcDOm17hw7iiSX72BWt1yydmow65CY1wesv9Mf0JARVk07KaH_g7_AG_JInMJw6Ofnor
+[5]: https://www.astm.org/d5311_d5311m-13.html 
