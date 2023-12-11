@@ -6,6 +6,8 @@ categories: media
 order: 5
 ---
 
+---
+
 # Conclusions
 
 * Main Conclusions
@@ -18,7 +20,9 @@ The deep learning model in this study uses convolutional neural networks (CNN) a
        
     3) Deep learning methods can be applied to classification and regression prediction in granular material fabric dataset.
 
-   
+
+---
+
  * Limitations
 
 Due to the exploratory limitations of this study, no definitive conclusions can be drawn regarding the establishment of a one-to-one physical correlation between porosity and fabrics. To enhance the reliability of findings, it is recommended to incorporate larger datasets and include a variety of experiments, such as simple shear, triaxial, drained, undrained, monotonic, and various looping tests. This approach aims to validate the predictive capabilities of the CNN/CNN-GRU model trained on fabric image data.
@@ -29,6 +33,7 @@ Traditional data augmentation for small-scale image datasets typically involves 
 
 Considering the dataset of this study, 2D Fabric Direction Distribution images lack clearly differentiated classification features. Therefore, it becomes crucial to assess whether traditional data enhancement methods maintain interpretability and physical meaning. For instance, does a flipped image still correspond to the void ratio of the original image? Addressing such questions is imperative for ensuring the applicability of neural networks to fabric image data.
 
+---
 
  * Future Work
 
