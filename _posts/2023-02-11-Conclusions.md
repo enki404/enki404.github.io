@@ -10,7 +10,7 @@ order: 5
 
 # Conclusions
 
-* Main Conclusions
+## * Main Conclusions
 
 The deep learning model in this study uses convolutional neural networks (CNN) and related task-based structures (CNN-GRU) to perform density classification and void ratio regression prediction on 2D Direction Distribution Histogram images. Like other neural network learning, the model calculation result and loss of each epoch are monitored, the difference between the actual value and the predicted value is calculated, and then the updated value of model parameters is determined through back propagation with the help of differential equations. As the model goes through more iterations, the loss gradually decreases and converges, indicating that the neural network is learning how to better capture the expected data relationships.
     
@@ -23,7 +23,7 @@ The deep learning model in this study uses convolutional neural networks (CNN) a
 
 ---
 
- * Limitations
+## * Limitations
 
 Due to the exploratory limitations of this study, no definitive conclusions can be drawn regarding the establishment of a one-to-one physical correlation between porosity and fabrics. To enhance the reliability of findings, it is recommended to incorporate larger datasets and include a variety of experiments, such as simple shear, triaxial, drained, undrained, monotonic, and various looping tests. This approach aims to validate the predictive capabilities of the CNN/CNN-GRU model trained on fabric image data.
 
@@ -35,7 +35,7 @@ Considering the dataset of this study, 2D Fabric Direction Distribution images l
 
 ---
 
- * Future Work
+## * Future Work
 
 We discovered an overfitting issue during prediction, which indicated that while the model performed well on the training data, it did not perform well on the test data. To address this challenge in future work, we plan to explore alternative approaches to mitigate high variance and low bias problems. This may involve implementing custom regularization techniques, integrating batch normalization, and exploring other strategies.
 
