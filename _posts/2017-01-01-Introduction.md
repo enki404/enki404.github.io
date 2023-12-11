@@ -6,6 +6,8 @@ categories: media
 order: 1
 ---
 
+---
+
 * What is Drained [Traxial Shear Test]?
   
   Triaxial shear testing is a widely employed method for assessing the mechanical properties of deformable solids, particularly soils (such as sands and clays), rocks, and various granular materials or powders.
@@ -21,6 +23,7 @@ In "consolidated drained" tests, the sample is slowly consolidated and sheared d
 Triaxial test data yield essential material parameters, including shear resistance angle, apparent cohesion, and expansion angle. These parameters are incorporated into computer models to predict material performance in larger-scale engineering applications.
 
 ---
+
 
 * Why do we consider Microstructure of granular materials?
   
