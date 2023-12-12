@@ -53,7 +53,7 @@ $$ q_{max}=(2p_{0})*CSR = 0.4p_{0} $$
 
 After the cyclic loading stage, all specimens are sheared to a large value of axial strain 
 
-$$ ε_{a} = 50% $$ 
+$$ ε_{a} = 50{\\%} $$
 
 to achieve the apparent critical state condition by monotonic loading
 
