@@ -82,7 +82,7 @@ Typically, errors can be accumulated across training examples and updated collec
 | dense (Dense)                  |(None, 64)               |    147520   |  ['flatten[0][0]']                |  
 | batch_normalization_4          |(None, 64)               |     256     |  ['dense[0][0]']                  |         
 | dropout (Dropout)              |(None, 64)               |      0      |  ['batch_normalization_4[0][0]']  |   
-| dense_1 (Dense)                |(None, 64)               |     4160    |  ['dense[0][0]']                  |  
+| dense_1 (Dense)                |(None, 64)               |    147520   |  ['flatten[0][0]']                |  
 | dropout_1 (Dropout)            |(None, 64)               |      0      |  ['dropout[0][0]']                |  
 | dropout_2 (Dropout)            |(None, 64)               |      0      |  ['dense_1[0][0]']                |  
 | density (Dense)                |(None, 3)                |     195     |  ['dropout_1[0][0]']              |  
