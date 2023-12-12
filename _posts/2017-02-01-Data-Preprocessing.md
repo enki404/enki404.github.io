@@ -26,10 +26,11 @@ order: 2
  
   The rose diagram can be directly mapped to a frequency histogram in 3D space using converted angles (θ, ϕ) based on spherical coordinate. We can then convert these 3D histograms to 2D images by using color scale to indicate the height of each bin in the histogram. The horizontal axis represents θ within the range of [-90°, 90°], while the vertical axis corresponds to ϕ within the range of [-180°, 180°]. [Figure 3] illustrates the representation of 3D directional distribution histograms and the corresponding 2D histogram images.
 
+---
 
   * ### **Raw 2D Contact Direction Distribution Histogram Image Dataset**
     
-  Open-source software YADE (Šmilauer et al, 2015) is used for all DEM simulations in this study. An assembly of 10,000 spherical particles is generated in a cubical domain using the prescribed grain size distribution (GSD)。Periodic boundaries are used in the simulation to ensure that particle information is not lost due to boundary effects. Initially after generation, all particles are not in contact and are thus in a free state. Then an isotropic (or K0) consolidation procedure is performed until a target mean stress (p) value is achieved through the servo-controller set by YADE. Samples with different initial void ratios (e0) can be obtained by changing the coefficient of friction μ between particles during consolidation, and the typical μ value for quartz sand 0.5 is restored right before the shearing stage.
+  Open-source software YADE (Šmilauer et al, 2015) is used for all DEM simulations in this study. An assembly of 10,000 spherical particles is generated in a cubical domain using the prescribed grain size distribution (GSD). Periodic boundaries are used in the simulation to ensure that particle information is not lost due to boundary effects. Initially after generation, all particles are not in contact and are thus in a free state. Then an isotropic (or K0) consolidation procedure is performed until a target mean stress (p) value is achieved through the servo-controller set by YADE. Samples with different initial void ratios (e0) can be obtained by changing the coefficient of friction μ between particles during consolidation, and the typical μ value for quartz sand 0.5 is restored right before the shearing stage.
 
   In this study, we prepared dense, medium, and loose samples using 
 
@@ -57,9 +58,14 @@ order: 2
 
   to achieve the apparent critical state condition by monotonic loading.
 
-  **A total of 24 tests were performed and we selected void fraction information under monotonic loading, in which case the void fraction was reported as a step increase from 0% to 50% with axial strain. Therefore, we can obtain 51 two-dimensional fabric orientation distribution histogram images for each simulation, and a total of **`51x24 = 1224`** original images are obtained through this method.**
+  **A total of 24 tests were performed and we selected void fraction information under monotonic loading, in which case the void fraction was reported as a step increase from 0% to 50% with axial strain. Therefore, we can obtain 51 two-dimensional fabric orientation distribution histogram images for each simulation, and a total of `51x24 = 1224`original images are obtained through this method.**
+
+---
 
 *  ## **Models/Methods**
+   * ## **CNN**
+
+A convolutional neural network ([CNN]) is a regularized type of feedforward neural network that learns feature engineering on its own through filter (or kernel) optimization. By using regularized weights over fewer connections, the vanishing and exploding gradients that occur during backpropagation in early neural networks can be prevented. Higher-level features are extracted from a wider context window than lower-level features.
 
 The network progresses by moving inputs forward, activating neurons positively, ultimately producing the final output. This forward movement is known as the forward pass or forward propagation. Following this, errors are computed by comparing actual data with model outputs. These errors are then propagated backward through the network, a process referred to as backpropagation. During backpropagation, to optimize the loss and achieve minimal loss, weights must be updated proportionate to their contribution to the error. This update process employs the gradient, which represents the derivative of the error with respect to the weights. A single iteration of the above process is termed an epoch. The number of epochs is determined based on the specific objectives of the work.
 
@@ -87,7 +93,7 @@ Typically, errors can be accumulated across training examples and updated collec
 | dropout_2 (Dropout)            |(None, 64)               |      0      |  ['dense_1[0][0]']                |  
 | density (Dense)                |(None, 3)                |     195     |  ['dropout_1[0][0]']              |  
 | void (Dense)                   |(None, 1)                |      65     |  ['dropout_2[0][0]']              |  
-|Total Params: 717,060           |Trainable params: 716.740| Non_Trainable params: 320                       |                                                                                                 
+|Total Params: 717,060           |Trainable params: 716,740| Non_Trainable params: 320                       |                                                                                                 
 
 The structural details of the CNN model in TF/Keras are shown in the code section below. It is worth noting that we try to use the same model structure to implement both the classification problem and the regression problem by only changing the output layer, partial fully connected layer and dropout layer. Therefore, this CNN model does not use the traditional `model.sequential()` to connect the neural network structure. In a sense, the model built here is more similar to the `(sequential + parallel)` structure.
 
@@ -138,4 +144,4 @@ The structural details of the CNN model in TF/Keras are shown in the code sectio
   ````
 
 
-
+[CNN]: https://en.wikipedia.org/wiki/Convolutional_neural_network#History
