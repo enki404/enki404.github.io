@@ -3,7 +3,7 @@
   <ul class="archive">
     {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title | sort(post.order) }}</a>
+      <a href="{{ post.url | relative_url }}">{{ sort(post.title) }}</a>
     </li>
     {% endfor %}
   </ul>
