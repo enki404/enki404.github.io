@@ -59,6 +59,44 @@ order: 2
 
   **A total of 24 tests were performed and we selected void fraction information under monotonic loading, in which case the void fraction was reported as a step increase from 0% to 50% with axial strain. Therefore, we can obtain 51 two-dimensional fabric orientation distribution histogram images for each simulation, and a total of **`51x24 = 1224`** original images are obtained through this method.**
 
-  * ### **Data Augmentation**
+*  ## **Models/Methods**
 
-* 
+The network progresses by moving inputs forward, activating neurons positively, ultimately producing the final output. This forward movement is known as the forward pass or forward propagation. Following this, errors are computed by comparing actual data with model outputs. These errors are then propagated backward through the network, a process referred to as backpropagation. During backpropagation, to optimize the loss and achieve minimal loss, weights must be updated proportionate to their contribution to the error. This update process employs the gradient, which represents the derivative of the error with respect to the weights. A single iteration of the above process is termed an epoch. The number of epochs is determined based on the specific objectives of the work.
+
+Typically, errors can be accumulated across training examples and updated collectively at the end of a batch, a process referred to as batch learning. The batch size corresponds to the computational quantity of examples involved in each update. The extent of weight adjustment is regulated by the learning rate, often referred to as a configuration parameter or step size. The designed model are employed as outlined in Figure 4, based on the preceding information.
+
+| Layer (type)                   |Output Shape             | Param #     | Connected to                    |
+| ------------------------------ | ----------------------- |-------------|---------------------------------|
+| Input (InputLayer)             |[(None, 128, 128, 1)     |      0      |      []                         |                     
+| conv2d (Conv2D)                |(None, 128, 128, 32)     |     832     |  ['Input[0][0]']                |                                                     
+| batch_normalization            |(None, 128, 128, 32)     |     128     |  ['conv2d[0][0]']               |                
+| max_pooling2d (MaxPooling2D)   |(None, 42, 42, 32)       |      0      |  ['batch_normalization[0][0]']  |  
+| conv2d_1 (Conv2D)              |(None, 42, 42, 64)       |    51264    |  ['max_pooling2d[0][0]']        |                                                     | batch_normalization_1          |(None, 42, 42, 64)       |     256     |  ['conv2d_1[0][0]']             |                                                  
+| max_pooling2d_1 (MaxPooling2D) |(None, 14, 14, 64)       |      0      |  ['batch_normalization_1[0][0]']|                                                
+| conv2d_2 (Conv2D)              |(None, 14, 14, 128)      |    73856    |  ['max_pooling2d_1[0][0]']      |  
+| max_pooling2d_2 (MaxPooling2D) |(None, 7, 7, 128)        |      0      |  ['conv2d_2[0][0]']             |  
+| conv2d_3 (Conv2D)              |(None, 7, 7, 256)        |    295168   |  ['max_pooling2d_2[0][0]']      |  
+| max_pooling2d_3 (MaxPooling2D) |(None, 3, 3, 256)        |      0      |  ['conv2d_3[0][0]']             |  
+| flatten (Flatten)              |(None, 2304)             | 0           |  ['max_pooling2d_3[0][0]']      |                                                     | dense (Dense)                  |(None, 64)               |  147520     |  ['flatten[0][0]']              |  
+| batch_normalization_4          |(None, 64)               |256          |  ['dense[0][0]']                |                                                    
+| dropout (Dropout)              |(None, 64)               |  0          |  ['batch_normalization_4[0][0]']|   
+| dense_1 (Dense)                |(None, 64)               |4160         |  ['dense[0][0]']                |  
+| dropout_1 (Dropout)            |(None, 64)               | 0           |  ['dropout[0][0]']              |  
+| dropout_2 (Dropout)            |(None, 64)               | 0           |  ['dense_1[0][0]']              |  
+| density (Dense)                |(None, 3)                |195          |  ['dropout_1[0][0]']            |  
+| void (Dense)                   |(None, 1)                |65           |  ['dropout_2[0][0]']            |  
+|Total Params: 573,700           |Trainable params: 573,380|Non_Trainable params: 320                      |                                                                                                 
+
+The structure details of CNN model in TF/Keras are shown as the following code part:
+
+
+````
+```javascript
+function foo () {
+    return "bar";
+}
+```
+````
+
+
+
