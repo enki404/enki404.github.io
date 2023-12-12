@@ -13,13 +13,6 @@ order: 5
 * ### **Main Conclusions**
 
 The deep learning model in this study uses convolutional neural networks (CNN) and related task-based structures (CNN-GRU) to perform density classification and void ratio regression prediction on 2D Direction Distribution Histogram images. Like other neural network learning, the model calculation result and loss of each epoch are monitored, the difference between the actual value and the predicted value is calculated, and then the updated value of model parameters is determined through back propagation with the help of differential equations. As the model goes through more iterations, the loss gradually decreases and converges, indicating that the neural network is learning how to better capture the expected data relationships.
-    
-    Based on the results, the main conclusions are as follows:
-    
-    1) The deep learning method based on CNN and its extension has been proven to effectively capture the correlation between fabric direction images and induce the density state and void ratio of granular materials.
-       
-    3) Deep learning methods can be applied to classification and regression prediction in granular material fabric dataset.
-
 
 ---
 
