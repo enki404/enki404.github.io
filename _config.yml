@@ -19,6 +19,7 @@ minimal: true             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md", title: "Home"} #icon: home}
   - {file: "index.html", title: "Projects"} #icon: align-center}
+    -{title: "5922_DL Application on Fabric Data", file:"2023-12-12-Introduction.md"}
   - {file: "About.md", title: "About"} #icon: address-card}
 #  - {file: "2017-01-01-Introduction.md", title: "Introduction"}
 #  - {file: "2017-02-01-Data-Preprocessing.md", title: "Data Preprocessing"}
