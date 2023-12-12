@@ -87,13 +87,13 @@ Typically, errors can be accumulated across training examples and updated collec
 | dropout_2 (Dropout)            |(None, 64)               |      0      |  ['dense_1[0][0]']                |  
 | density (Dense)                |(None, 3)                |     195     |  ['dropout_1[0][0]']              |  
 | void (Dense)                   |(None, 1)                |      65     |  ['dropout_2[0][0]']              |  
-|Total Params: 573,700           |Trainable params: 573,380| Non_Trainable params: 320                       |                                                                                                 
+|Total Params: 717,060           |Trainable params: 716.740| Non_Trainable params: 320                       |                                                                                                 
 
 The structural details of the CNN model in TF/Keras are shown in the code section below. It is worth noting that we try to use the same model structure to implement both the classification problem and the regression problem by only changing the output layer, partial fully connected layer and dropout layer. Therefore, this CNN model does not use the traditional `model.sequential()` to connect the neural network structure. In a sense, the model built here is more similar to the `(sequential + parallel)` structure.
 
 
   ````
-  ```javascript
+  ```
   inputs = Input((input_shape),name='Input')
   
   `Convolutional Layers`
