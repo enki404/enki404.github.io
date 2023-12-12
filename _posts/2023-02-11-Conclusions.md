@@ -30,11 +30,13 @@ Considering the dataset of this study, 2D Fabric Direction Distribution images l
 
 * ### **Future Work**
 
-We discovered an overfitting issue during prediction, which indicated that while the model performed well on the training data, it did not perform well on the test data. To address this challenge in future work, we plan to explore alternative approaches to mitigate high variance and low bias problems. This may involve implementing custom regularization techniques, integrating batch normalization, and exploring other strategies.
+We discovered an fluctuation issue during prediction, which indicated that while the model performed well on the data, it did suffer some noisey indormation with propagation. To address this challenge in future work, we plan to explore alternative approaches to mitigate high variance and low bias problems. This may involve implementing custom regularization techniques, integrating batch normalization, and exploring other strategies.
 
 It is important to emphasize that our input dataset is relatively smaller than typical datasets. In future efforts, we aim to collate a broader dataset containing more fabric orientation information. Using a larger dataset as input is expected to significantly improve the performance of the model. Furthermore, we can leverage transfer learning to handle limited input data. The advantages of transfer learning are its low computational cost and its ability to adapt pre-trained networks to similar feature prediction tasks.
 
-Additionally, special attention needs to be paid to the margin of error in our forecasts. In conventional deep learning research, the error rate obtained in this experiment ranges from minimum 4% to a maximum of 17.16%, which can be considered to meet the project requirements. However, for [void ratio] regression predictions, this error percentage may not be small enough to validate the model ability. Given that “void ratio” is a physical quantity that represents the ratio of pore volume to the total(solids) volume of a material, and that it always lies between 0 and 1, addressing the high variance of the prediction error range is a key goal for future work.
+Additionally, special attention needs to be paid attention to the margin of error in our forecasts. In conventional deep learning research, the error rate obtained in this experiment ranges from minimum 0.0178% to a maximum of 23.13% (average = 5.69%), which can be considered to satisfy the project requirements. However, for void ratio regression predictions, this error percentage may not be small enough to validate the model ability, (i.e. [Figure 1]). Given that “[void ratio]” is a physical quantity that represents the ratio of pore volume to the total(solids) volume of a material, and that it always lies between 0 and 1, addressing the high variance of the prediction error range is a key goal for future work.
+
+![Figure 1](/assets/e_results_variance.png) 
 
 The Physical Information Neural Network [PINN] serves as an application method for scientific machines in the traditional numerical field, particularly in addressing a variety of challenges related to partial differential equations (PDE). These challenges encompass tasks such as equation solving, parameter inversion, model discovery, control, and optimization.
 
@@ -43,3 +45,4 @@ To enhance the prediction model for void ratio, it is crucial to incorporate phy
 
 [PINN]: https://en.wikipedia.org/wiki/Physics-informed_neural_networks
 [void ratio]: https://en.wikipedia.org/wiki/Void_ratio
+[Figure 1]: https://github.com/enki404/enki404.github.io/blob/master/assets/e_results_variance.png 
