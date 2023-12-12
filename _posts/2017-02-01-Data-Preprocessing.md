@@ -67,36 +67,75 @@ Typically, errors can be accumulated across training examples and updated collec
 
 | Layer (type)                   |Output Shape             | Param #     | Connected to                      |
 | ------------------------------ | ----------------------- |-------------|-----------------------------------|
-| Input (InputLayer)             |[(None, 128, 128, 1)     |      0      |      []                           |                     
-| conv2d (Conv2D)                |(None, 128, 128, 32)     |     832     |  ['Input[0][0]']                  |                                                   | batch_normalization            |(None, 128, 128, 32)     |     128     |  ['conv2d[0][0]']                 |                
+| Input (InputLayer)             |[(None, 128, 128, 1)     |      0      |      []                           |              
+| conv2d (Conv2D)                |(None, 128, 128, 32)     |     832     |  ['Input[0][0]']                  |
+| batch_normalization            |(None, 128, 128, 32)     |     128      |  ['conv2d[0][0]']                |
 | max_pooling2d (MaxPooling2D)   |(None, 42, 42, 32)       |      0      |  ['batch_normalization[0][0]']    |  
 | conv2d_1 (Conv2D)              |(None, 42, 42, 64)       |    51264    |  ['max_pooling2d[0][0]']          |  
-| batch_normalization_1          |(None, 42, 42, 64)       |     256     |  ['conv2d_1[0][0]']               |                                                  
-| max_pooling2d_1 (MaxPooling2D) |(None, 14, 14, 64)       |      0      |  ['batch_normalization_1[0][0]']  |                                                
+| batch_normalization_1          |(None, 42, 42, 64)       |     256     |  ['conv2d_1[0][0]']               | 
+| max_pooling2d_1 (MaxPooling2D) |(None, 14, 14, 64)       |      0      |  ['batch_normalization_1[0][0]']  |             
 | conv2d_2 (Conv2D)              |(None, 14, 14, 128)      |    73856    |  ['max_pooling2d_1[0][0]']        |  
 | max_pooling2d_2 (MaxPooling2D) |(None, 7, 7, 128)        |      0      |  ['conv2d_2[0][0]']               |  
 | conv2d_3 (Conv2D)              |(None, 7, 7, 256)        |    295168   |  ['max_pooling2d_2[0][0]']        |  
 | max_pooling2d_3 (MaxPooling2D) |(None, 3, 3, 256)        |      0      |  ['conv2d_3[0][0]']               |  
-| flatten (Flatten)              |(None, 2304)             | 0           |  ['max_pooling2d_3[0][0]']        |                                                   | dense (Dense)                  |(None, 64)               |  147520     |  ['flatten[0][0]']                |  
-| batch_normalization_4          |(None, 64)               |256          |  ['dense[0][0]']                  |                                                   
-| dropout (Dropout)              |(None, 64)               |  0          |  ['batch_normalization_4[0][0]']  |   
-| dense_1 (Dense)                |(None, 64)               |4160         |  ['dense[0][0]']                  |  
-| dropout_1 (Dropout)            |(None, 64)               | 0           |  ['dropout[0][0]']                |  
-| dropout_2 (Dropout)            |(None, 64)               | 0           |  ['dense_1[0][0]']                |  
-| density (Dense)                |(None, 3)                |195          |  ['dropout_1[0][0]']              |  
-| void (Dense)                   |(None, 1)                |65           |  ['dropout_2[0][0]']              |  
-|Total Params: 573,700           |Trainable params: 573,380|Non_Trainable params: 320                        |                                                                                                 
+| flatten (Flatten)              |(None, 2304)             |      0      |  ['max_pooling2d_3[0][0]']        |
+| dense (Dense)                  |(None, 64)               |    147520   |  ['flatten[0][0]']                |  
+| batch_normalization_4          |(None, 64)               |     256     |  ['dense[0][0]']                  |         
+| dropout (Dropout)              |(None, 64)               |      0      |  ['batch_normalization_4[0][0]']  |   
+| dense_1 (Dense)                |(None, 64)               |     4160    |  ['dense[0][0]']                  |  
+| dropout_1 (Dropout)            |(None, 64)               |      0      |  ['dropout[0][0]']                |  
+| dropout_2 (Dropout)            |(None, 64)               |      0      |  ['dense_1[0][0]']                |  
+| density (Dense)                |(None, 3)                |     195     |  ['dropout_1[0][0]']              |  
+| void (Dense)                   |(None, 1)                |      65     |  ['dropout_2[0][0]']              |  
+|Total Params: 573,700           |Trainable params: 573,380| Non_Trainable params: 320                       |                                                                                                 
 
-The structure details of CNN model in TF/Keras are shown as the following code part:
+The structural details of the CNN model in TF/Keras are shown in the code section below. It is worth noting that we try to use the same model structure to implement both the classification problem and the regression problem by only changing the output layer, partial fully connected layer and dropout layer. Therefore, this CNN model does not use the traditional `model.sequential()` to connect the neural network structure. In a sense, the model built here is more similar to the `(sequential + parallel)` structure.
 
 
-````
-```javascript
-function foo () {
-    return "bar";
-}
-```
-````
+  ````
+  ```javascript
+  inputs = Input((input_shape),name='Input')
+  
+  `Convolutional Layers`
+  
+  conv1 = Conv2D(32,kernel_size=(5,5),strides=(1,1),activation='relu',padding='same')(inputs)
+  batch1 = tf.keras.layers.BatchNormalization(axis=-1,momentum=0.99,epsilon=0.009)(conv1)
+  maxp1 = MaxPooling2D(pool_size=(3,3))(batch1)
+  
+  conv2 = Conv2D(64,kernel_size=(5,5),strides=(1,1),activation='relu',padding='same')(maxp1)
+  batch2 = tf.keras.layers.BatchNormalization(axis=-1,momentum=0.99,epsilon=0.15)(conv2)
+  maxp2 = MaxPooling2D(pool_size=(3,3))(batch2)
+  
+  conv3 = Conv2D(128,kernel_size=(3,3),strides=(1,1),activation='relu',padding='same')(maxp2)
+  bacth3 = tf.keras.layers.BatchNormalization()(conv3)
+  maxp3 = MaxPooling2D(pool_size=(2,2))(conv3)
+  
+  conv4 = Conv2D(256,kernel_size=(3,3),strides=(1,1),activation='relu',padding='same')(maxp3)
+  batch4 = tf.keras.layers.BatchNormalization()(conv4)
+  maxp4 = MaxPooling2D(pool_size=(2,2))(conv4)
+  
+  `Flatten Layer `
+  flatten = Flatten()(maxp4)
+  
+  `Fully Connected layer`
+  
+  fc1 = Dense(64,activation='relu',kernel_regularizer=tf.keras.regularizers.L2(0.09))(flatten)
+  batch5 = tf.keras.layers.BatchNormalization()(fc1)
+  dropout1 = Dropout(0.4)(batch5)
+  fc2 = Dense(64,activation='relu')(flatten)
+  
+  dropout11 = Dropout(0.7)(dropout1)
+  dropout2 = Dropout(0.05)(fc2)
+  
+  `Regression $ Classificcation Outputs`
+  
+  output1 = Dense(3,activation='softmax',name='density')(dropout11)
+  output2 = Dense(1,activation='linear',name='void')(dropout2)
+  
+  model = Model(inputs = [inputs], outputs = [output1,output2])
+  }
+  ```
+  ````
 
 
 
