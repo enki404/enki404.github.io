@@ -10,7 +10,9 @@ order: 1
 
 * ### **What is Drained [Traxial Shear Test]?**
   
-  Triaxial shear testing is a widely employed method for assessing the mechanical properties of deformable solids, particularly soils (such as sands and clays), rocks, and various granular materials or powders.
+  Triaxial shear testing is a widely employed method for assessing the mechanical properties of deformable solids, particularly soils (such as sands and clays), rocks, and various granular materials or powders. [Figure 1]
+
+![Figure 1](https://environment.uwe.ac.uk/geocal/SLOPES/GIFS/TRIAXIAL.GIF)  
 
 In a triaxial shear test, stress is applied to a sample, creating different stresses along orthogonal axes. This is typically achieved by placing the sample between two parallel platens, applying stress in one direction (usually perpendicular), and introducing fluid pressure to impose stress in the perpendicular direction.
 
@@ -22,6 +24,7 @@ In "consolidated drained" tests, the sample is slowly consolidated and sheared d
 
 Triaxial test data yield essential material parameters, including shear resistance angle, apparent cohesion, and expansion angle. These parameters are incorporated into computer models to predict material performance in larger-scale engineering applications.
 
+
 ---
 
 
@@ -32,7 +35,9 @@ Geotechnical researchers utilize a variety of experimental and modeling techniqu
 
 This framework provides many opportunities to construct constitutive models to simulate soil stress-strain behavior. Most geotechnical studies use first-order geometric descriptors (i.e., void fraction) to describe critical state phenomena. 
 
-Recently, [Zhang et al. (2020)] proposed a new constitutive framework for granular materials called `critical fabric theory (CFT)`. CFT aims to define critical states relying solely on the geometric characteristics of the soil's inertial structure. Specifically, a second-order fabric tensor can be constructed based on the directional distribution density of contact normals. Critical states in CFT can be visualized as critical structure surfaces (CFS) in the main structure space. It was proposed that CFS attracts the fabric state of granular material when sheared, which is manifested by the fabric path toward the CFS. **The classical CSL and CSSM can be recovered after providing some secondary relations linking the contact fabric to the stress tensor and the void fraction of the particle components.**
+Recently, [Zhang et al. (2020)] proposed a new constitutive framework for granular materials called `critical fabric theory (CFT)`. CFT aims to define critical states relying solely on the geometric characteristics of the soil's inertial structure. Specifically, a second-order fabric tensor can be constructed based on the directional distribution density of contact normals. Critical states in CFT can be visualized as critical structure surfaces (CFS) in the main structure space. It was proposed that CFS attracts the fabric state of granular material when sheared, which is manifested by the fabric path toward the CFS. **The classical CSL and CSSM can be recovered after providing some secondary relations linking the contact fabric to the stress tensor and the void fraction of the particle components.** [Figure 2]
+
+![Figure 2](/assets/simplified-critical-state-soil-mechanics1-l.jpg)
 
     CFT provides an alternative perspective on critical state phenomena with several unique advantages:
     
@@ -42,7 +47,9 @@ Recently, [Zhang et al. (2020)] proposed a new constitutive framework for granul
 
 Therefore, the second-order fabric tensor constructed by CFT can be used to visualize the microstructure of granular material, and each contact normal can be described by the position vector of Cartesian Coordinate space. These position vectors can be used to plot direction distribution diagram, which utilizes the directional information of total contact normal **`(nx, ny, nz)`** from DEM simulations to illustrate particle interactions.
 
+
 ---
+
 
 * ### **What are the applicatioins of CFT?**
 
@@ -52,6 +59,8 @@ Simple elastoplastic models built upon CFT can model the basic behaviors of gran
 
 These cyclic loads simulate the reality of dynamic loads that can come from earthquakes, passing vehicles and trains, waves, wind, vibrating machines, etc. Understanding soil’s liquefaction potential can ensure that the cyclic strength of the soil can cope with the subsequent effects of natural and man-made cyclic loadings like earthquake and traffic loadings.  
 
+![Figure 3](https://www.norsonic.asia/wp-content/uploads/2016/06/vibration.png)
+
 
 [Traxial Shear Test]: https://en.wikipedia.org/wiki/Triaxial_shear_test#Consolidated_drained_(CD) 
 [void ratio]: https://en.wikipedia.org/wiki/Void_ratio
@@ -60,3 +69,5 @@ These cyclic loads simulate the reality of dynamic loads that can come from eart
 [Schofield & Wroth, 1968]: https://d1wqtxts1xzle7.cloudfront.net/7615800/cssm-libre.pdf?1391814949=&response-content-disposition=inline%3B+filename%3DCritical_state_soil_mechanics.pdf&Expires=1702336592&Signature=bhDTl5FBnXPNN5FK7uljbb4OpyUyurlXH~Rf2iKL-H2GfeGmBF42bz-XjMPdxr8GNR0pMRNYIZFYc0ZVrdH7wLNNKU9lSavx2rjBcR2bnaZ7J82prUf4E2N-QwiTQjchZVe7of7b~1tsphsrj~lDXv3bZS~A5hg1vhIx1ugvttWPRdp2oHfAESXqEt-fyn~NYBpPwax0jVijIIsGc8vAKBbbTzPcXV8-1HBgySNzCQmgZX6PI5~NMfHx4P1h0BKJcjq16fPzwsJ20gyJWcw1h~vBTrI6A4dJXc7TLW2zNI2KUeNWyJmEXEMJyQ0mMS0qi0wlnXcPj88oTrWVkRQZrg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
 [Zhang et al. (2020)]: https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EM.1943-7889.0001741?casa_token=_qsEivr1V2sAAAAA%3Arxm-tzo7DcDOm17hw7iiSX72BWt1yydmow65CY1wesv9Mf0JARVk07KaH_g7_AG_JInMJw6Ofnor
 [(ASTM D5311/D5311M-13, 2022)]: https://www.astm.org/d5311_d5311m-13.html 
+[Figure 2]: https://www.slideserve.com/yaholo/simplified-critical-state-soil-mechanics
+[Figure 1]: https://environment.uwe.ac.uk/geocal/SLOPES/GIFS/TRIAXIAL.GIF 
