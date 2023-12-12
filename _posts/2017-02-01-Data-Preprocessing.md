@@ -83,7 +83,7 @@ order: 2
   |    2     |  Loose     | Numeric(0~1)|
   
 
-  ![Figure 5](/assets/display_raw_image.png)
+![Figure 5](/assets/display_raw_image.png)
 
 
   In order to prepare image data with a more reasonable representation, the pixel values of each input image are normalized to the range [0,1] with a scale of "(1/255.0)". The shape of the input data is (128,128,1), which means the grayscale image is selected for prediction.
