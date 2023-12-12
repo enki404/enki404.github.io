@@ -27,7 +27,7 @@ To facilitate connection with the CNN/CNN-GRU model, we will explore another way
 The rose diagram can be directly mapped to a frequency histogram in 3D space using converted angles (θ, ϕ) based on spherical coordinate. We can then convert these 3D histograms to 2D images by using color scale to indicate the height of each bin in the histogram. The horizontal axis represents θ within the range of [-90°, 90°], while the vertical axis corresponds to ϕ within the range of [-180°, 180°]. [Figure 3] illustrates the representation of 3D directional distribution histograms and the corresponding 2D histogram images.
 
 
-  * ### **Raw 2D Contact Direction Distribution Histogram Image Dataset**
+ * ### **Raw 2D Contact Direction Distribution Histogram Image Dataset**
     
 Open-source software YADE (Šmilauer et al, 2015) is used for all DEM simulations in this study. An assembly of 10,000 spherical particles is generated in a cubical domain using the prescribed grain size distribution (GSD)。Periodic boundaries are used in the simulation to ensure that particle information is not lost due to boundary effects. Initially after generation, all particles are not in contact and are thus in a free state. Then an isotropic (or K0) consolidation procedure is performed until a target mean stress (p) value is achieved through the servo-controller set by YADE. Samples with different initial void ratios (e0) can be obtained by changing the coefficient of friction μ between particles during consolidation, and the typical μ value for quartz sand 0.5 is restored right before the shearing stage.
 
@@ -59,6 +59,6 @@ to achieve the apparent critical state condition by monotonic loading.
 
 **A total of 24 tests were performed and we selected void fraction information under monotonic loading, in which case the void fraction was reported as a step increase from 0% to 50% with axial strain. Therefore, we can obtain 51 two-dimensional fabric orientation distribution histogram images for each simulation, and a total of **`51x24 = 1224`** original images are obtained through this method.**
 
-  * ### **Data Augmentation**
+ * ### **Data Augmentation**
 
 * 
