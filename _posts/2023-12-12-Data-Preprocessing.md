@@ -91,8 +91,12 @@ order: 2
   $$ X_{pixel} = \frac{X_{pixel}}{255.0} $$
 
 
+Clean image zipped file can be found in [google drive].
+
+
 [Figure 1]: https://github.com/enki404/enki404.github.io/blob/master/assets/CC_SC.png
 [Figure 2]: https://github.com/enki404/enki404.github.io/blob/master/assets/3D_Rose.png
 [Figure 3]: https://github.com/enki404/enki404.github.io/blob/master/assets/3D_Hist.png
 [Figure 4]: https://github.com/enki404/enki404.github.io/blob/master/assets/2D_HIST.png
 [Figure 5]: https://github.com/enki404/enki404.github.io/blob/master/assets/display_raw_image.png
+[google drive]: https://drive.google.com/drive/u/0/folders/1FLxUs26gRdet_AtRYPiq9JG4QDGm-j3O
