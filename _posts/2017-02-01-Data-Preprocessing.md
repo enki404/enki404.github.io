@@ -63,6 +63,7 @@ order: 2
 ---
 
 *  ## **Models/Methods**
+  
    * ## **CNN**
 
 A convolutional neural network ([CNN]) is a regularized type of feedforward neural network that learns feature engineering on its own through filter (or kernel) optimization. By using regularized weights over fewer connections, the vanishing and exploding gradients that occur during backpropagation in early neural networks can be prevented. Higher-level features are extracted from a wider context window than lower-level features.
