@@ -60,6 +60,18 @@ order: 2
 
   **A total of 24 tests were performed and we selected void fraction information under monotonic loading, in which case the void fraction was reported as a step increase from 0% to 50% with axial strain. Therefore, we can obtain 51 two-dimensional fabric orientation distribution histogram images for each simulation, and a total of `51x24 = 1224`original images are obtained through this method.**
 
+  The density classification label is coded as 0, 1, and 2, and the porosity (void ratio) regression label is the real void ratio numerical data.
+  
+  |Label     |Density     |Void Ratio   |
+  |----------|------------|-------------|
+  |    0     |  Dense     | Numeric(0~1)|
+  |    1     |  Medium    | Numeric(0~1)|
+  |    2     |  Loose     | Numeric(0~1)|
+
+  In order to prepare image data with a more reasonable representation, the pixel values of each input image are normalized to the range [0,1] with a scale of "(1/255.0)". The shape of the input data is (128,128,1), which means the grayscale image is selected for prediction.
+
+  $$ X_{pixel} = \frac{X_{pixel}}{255.0} $$
+
 ---
 
 *  ## **Models/Methods**
@@ -100,7 +112,7 @@ In general, errors can be accumulated across training examples and updated colle
 | void (Dense)                   |(None, 1)                |      65     |  ['dropout_2[0][0]']              |  
 |Total Params: 717,060           |Trainable params: 716,740| Non_Trainable params: 320                       |                                                                                                 
 
-The structural details of the CNN model in TF/Keras are shown in the code section below. It is worth noting that we try to use the same model structure to implement both the classification problem and the regression problem by only changing the output layer, partial fully connected layer and dropout layer. Therefore, this CNN model does not use the traditional `model.sequential()` to connect the neural network structure. In a sense, the model built here is more similar to the `(sequential + parallel)` structure.
+The structural details of the CNN model in TF/Keras are shown in the code section below. It is worth noting that we try to use the same model structure to implement both the classification problem and the regression problem by only changing the output layer, partial fully connected layer and dropout layer. Therefore, this CNN model does not use the traditional `model.sequential()` to connect the neural network structure. In a sense, the model built here is more similar to the `(sequential + parallel)` structure. The optimizer is `Adam` with a decay learning rate from 1e-4 with a decay rate of 0.9 from 10000 steps.
 
 
   ````
