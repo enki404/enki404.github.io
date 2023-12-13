@@ -64,6 +64,18 @@ These cyclic loads simulate the reality of dynamic loads that can come from eart
 ![Figure 3](https://www.norsonic.asia/wp-content/uploads/2016/06/vibration.png)
 
 
+---
+
+* ### **Motivation about DL Applications on CFT**
+
+Void ratio is one of the most fundamental states descriptors of granular soils and is widely used in geotechnical engineering practices. On the other hand, the important role of fabric in soil mechanics has been intensively investigated in recent years. A fundamental question, however, remains unanswered: are there one-to-one relations between these two internal variables? The answer to this question has profound mechanical implications. If “yes”, fabric-based constitutive models no longer need to include void ratio in their formulation to recover the conventional critical state line. 
+
+With the advancement of Deep Learning, an increasing number of scientists are harnessing the capabilities of Neural Networks to analyze data features and manage vast quantities of information. The application of neural networks in predicting soil stress-strain responses has gained significant popularity as a data-driven approach in recent years. Traditional constitutive models were tailored for specific types of sands or conditions, relying on heuristic evolution laws that are not generalizable to all types of loading conditions. In contrast, Deep Learning, renowned for its data-driven approach, excels in handling nonlinear relationships. The DL model not only circumvents the high computational costs but also alleviates the need for laborious mathematical analysis.
+
+However, it is important to note that most of the deep learning-based modeling in this field has been centered around sequential numeric data for predicting mechanical behaviors and fabric anisotropy evolution. The application of image data to represent fabric information has not received significant attention in geomechanics. Insights gathered from soil images provide an intuitive means of describing soil properties. In this research, our primary focus is on exploring the potential of spatial data, specifically pertaining to directional contacts within soil assemblies, to infer the density (or void ratio) information in granular materials. 
+
+
+
 [Traxial Shear Test]: https://en.wikipedia.org/wiki/Triaxial_shear_test#Consolidated_drained_(CD) 
 [void ratio]: https://en.wikipedia.org/wiki/Void_ratio
 [Terzaghi et al., 1996]: https://books.google.com/books?hl=en&lr=&id=XjH6DwAAQBAJ&oi=fnd&pg=PR19&dq=Terzaghi+et+al.,+1996&ots=aiGuM4WccK&sig=Lkl5CF0Xa7-dGXNKHd0ahz7r3O0#v=onepage&q=Terzaghi%20et%20al.%2C%201996&f=false
